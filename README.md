@@ -1,240 +1,222 @@
-# Dolado: Teste prático para Frontend
+### Como foi a experiência no decorrer de todo o processo de desenvolvimento?
 
-## Introdução
+A experiência no desenvolvimento deste teste técnico foi extremamente positiva e completa, abrangendo desde a consolidação de tecnologias dominadas até a exploração de novas fronteiras com IA.
 
-Este é o teste que nós da Dolado usamos para avaliar os candidatos de vagas para Frontend. Do estagiário ao sênior, todos são avaliados pelo mesmo teste, mas por critérios distintos. Se você estiver participando de um processo seletivo para nossa equipe, certamente em algum momento receberá este link, mas caso você tenha chegado aqui "por acaso", sinta-se convidado a desenvolver nosso teste e enviar uma mensagem para nós no e-mail tech@dolado.com.br.
+#### Base Técnica e Execução Ágil
 
-A ideia deste teste é ser acessível para todos, mas de acordo com a vaga olhamos com maior rigor para alguns pontos. De todo modo, esperamos que no decorrer deste desafio você tenha uma ótima experiência e esteja satisfeito com o resultado final antes de enviá-lo. Por este motivo, não colocamos um prazo para a realização do teste e esperamos que você dedique o tempo necessário até estar satisfeito com o resultado.
+O projeto me permitiu aplicar minha experiência prática em um ecossistema de frontend moderno, utilizando tecnologias com as quais tenho grande familiaridade, como React, Next.js, TypeScript e Tailwind CSS. A utilização de bibliotecas como **Shadcn/UI** e **Framer Motion** agilizou a criação de uma interface polida e responsiva, permitindo que eu focasse na lógica de negócio e na experiência do usuário.
 
-Nós fazemos isso esperando que as pessoas mais iniciantes entendam qual o modelo de profissional que temos por aqui e que buscamos para o nosso time. Portanto, se você estiver se candidatando a uma vaga mais iniciante, não se assuste e faça o melhor que você puder!
+#### O Valor Prático dos Testes Automatizados
 
-## Instruções
+Uma parte fundamental do meu processo foi a implementação de uma estratégia de testes robusta desde o início, com **Vitest** para testes unitários e **Playwright** para testes E2E. O valor dessa abordagem se provou imenso durante o desenvolvimento: ao refatorar componentes ou a lógica da `store`, a suíte de testes funcionava como uma rede de segurança contra regressões, alertando imediatamente quando uma quebra de funcionalidade era introduzida. Isso permitiu correções rápidas e eficientes, reforçando a importância de um ciclo de desenvolvimento orientado a testes para garantir a qualidade e a segurança do software.
 
-Você deverá criar um fork deste projeto e desenvolver todo o teste em cima dele. Esperamos encontrar no README principal do seu repositório uma descrição minuciosa sobre:
+#### Desafios de Produto e Exploração Tecnológica
 
-- Como foi a experiência no decorrer de todo o processo de desenvolvimento?
-- Quais foram as principais decisões tomadas?
-- Como foi organizado o projeto em termos de estrutura de pastas e arquivos?
-- Instruções de como rodar o projeto.
+O desafio mais estratégico foi, sem dúvida, a concepção da UI/UX. O objetivo não era apenas técnico, mas criar uma ponte entre a ferramenta e o usuário final — uma interface que transmitisse confiança, profissionalismo e simplicidade para um público B2B.
 
-Lembre-se que este é um teste técnico e não um concurso público, portanto, não existe apenas uma resposta correta. Mostre que você é bom e nos impressione, mas não esqueça do objetivo do projeto.
+O ponto alto da exploração técnica foi a integração com Inteligência Artificial via **Hugging Face**. Sendo uma ferramenta nova para mim, o processo envolveu desde a pesquisa e escolha de um modelo de linguagem adequado (`LLM`) até a implementação de uma API Route segura no Next.js para gerenciar as chamadas. A facilidade de uso e o poder dos modelos disponíveis me impressionaram, e a Hugging Face posicionou-se como uma ferramenta estratégica no meu arsenal técnico para futuras implementações de IA.
 
-## O Desafio
+### Quais foram as principais decisões tomadas?
 
-Você acabou de ser contratado como desenvolvedor frontend na Dolado e seu primeiro projeto é crucial: nossa equipe de produto identificou que muitos empresários abandonam o processo de onboarding porque acham as etapas confusas e impessoais. 
+A construção deste projeto envolveu diversas decisões estratégicas de arquitetura e tecnologia para garantir um resultado robusto, escalável e alinhado às melhores práticas do mercado. As principais foram:
 
-O CEO te chamou e disse: *"Precisamos transformar essa experiência em algo que pareça uma conversa natural com um consultor especialista. Imagine que o empresário está conversando com alguém que realmente entende do negócio dele."*
+- **Gerenciamento de Estado com Zustand:**
+    
+    - **Decisão:** Optei por utilizar Zustand em vez de outras soluções como Context API ou Redux.
+        
+    - **Raciocínio:** Para um projeto desta complexidade, o Context API poderia levar a re-renderizações desnecessárias. O Zustand oferece um controle de estado centralizado e reativo com um boilerplate mínimo, uma API de hooks intuitiva e performance otimizada, sendo a escolha ideal para gerenciar o fluxo da conversa de forma eficiente e limpa.
+        
+- **Arquitetura de Componentes com shadcn/ui e Tailwind CSS:**
+    
+    - **Decisão:** Utilizar shadcn/ui como base para os componentes de UI, em conjunto com Tailwind CSS.
+        
+    - **Raciocínio:** Diferente de bibliotecas de componentes tradicionais, shadcn/ui permite total posse e customização do código dos componentes. Isso, combinado com a agilidade do Tailwind CSS, criou um fluxo de desenvolvimento de UI extremamente rápido e flexível, permitindo a criação de um design system consistente e de fácil manutenção.
+        
+- **Estratégia de Testes com Vitest e React Testing Library:**
+    
+    - **Decisão:** Adotar Vitest como executor de testes no lugar de alternativas como o Jest.
+        
+    - **Raciocínio:** Vitest oferece uma experiência de desenvolvimento superior em projetos modernos com Vite/Next.js, com configuração simplificada e performance excepcional. Combinado com a filosofia da React Testing Library de testar o comportamento do ponto de vista do usuário, pude criar testes unitários que garantem a funcionalidade da aplicação sem se acoplar aos detalhes de implementação.
+        
+- **Chatbot Híbrido (Scripted + AI):**
+    
+    - **Decisão:** Implementar uma lógica que inicia a conversa com um fluxo pré-definido (scripted) e transiciona para um modo de IA dinâmico assim que o usuário desvia do roteiro.
+        
+    - **Raciocínio:** Esta abordagem híbrida oferece o melhor dos dois mundos: garante uma jornada de onboarding guiada e consistente para o caso de uso principal, ao mesmo tempo que oferece a flexibilidade e a inteligência de uma IA para lidar com perguntas inesperadas, demonstrando uma solução de produto mais completa e robusta.
+        
+- **Integração Segura com a API (Next.js API Route):**
+    
+    - **Decisão:** Criar uma API Route interna no Next.js (`/api/chat`) para servir como um intermediário entre o frontend e a API da Hugging Face.
+        
+    - **Raciocínio:** Esta é uma prática de segurança fundamental. Ela impede que a chave de API secreta (`API Token`) seja exposta no navegador do cliente. Toda a comunicação com o serviço externo é feita de forma segura no lado do servidor, que é o ambiente correto para gerenciar tokens.
 
-Sua missão é criar uma interface de chatbot inteligente que faça o empresário se sentir compreendido e confiante de que a Dolado é a solução certa para transformar sua empresa em uma potência digital.
+### Como foi organizado o projeto em termos de estrutura de pastas e arquivos?
 
-O chatbot deve conduzir uma conversa natural, coletando informações estratégicas sobre a empresa e culminando em um diagnóstico personalizado que mostre exatamente como a Dolado pode ajudar esse cliente específico a crescer nos marketplaces.
+A estrutura do projeto foi pensada para ser intuitiva, escalável e manter uma clara separação de responsabilidades, utilizando um diretório `src/` para isolar o código da aplicação das configurações na raiz.
 
-**O desafio real:** Fazer com que um empresário tradicional, que talvez nunca tenha vendido online, termine a conversa pensando "Nossa, esses caras realmente entendem do meu negócio!"
+A organização principal é a seguinte:
 
-### O contexto da conversa:
-
-Imagine que você está criando a experiência para Roberto, diretor comercial de uma indústria consolidada que fatura R$ 50 milhões por ano vendendo exclusivamente para distribuidores e grandes redes. A empresa tem 30 anos de mercado, produtos de qualidade reconhecida, mas zero presença digital. 
-
-Roberto sabe que precisa "entrar no digital" porque vê concorrentes menores crescendo online, mas não sabe como uma empresa do porte dele pode competir nesses canais sem canibalizarizar os parceiros tradicionais.
-
-Seu chatbot precisa:
-- Demonstrar que entende a complexidade de grandes operações
-- Mostrar como marketplaces podem ser um canal adicional, não concorrente  
-- Abordar receios específicos de indústrias (pricing, distribuição, marca)
-- Convencer que a Dolado tem experiência com empresas do porte dele
-
-### Jornada conversacional sugerida:
-
-1. **Boas-vindas** - Quebrar o gelo e explicar o valor da conversa
-2. **Qualificação inicial** - Entender o negócio de forma natural  
-3. **Análise de marketplace** - Descobrir ambições e receios sobre venda online
-4. **Produtos** - Compreender o catálogo e potencial digital
-5. **Diagnóstico** - Avaliar maturidade atual sem julgamentos
-6. **Resultado** - Apresentar um plano específico e inspirador
-
-*Nota: Você pode implementar todas essas etapas ou focar nas que considerar mais importantes para demonstrar suas habilidades.*
-
-### Estrutura dos mocks fornecidos
-
-Para facilitar o desenvolvimento, fornecemos abaixo exemplos de respostas que o chatbot pode usar em cada etapa. **Você pode usar exatamente esses dados ou criar os seus próprios seguindo a estrutura.**
-
-#### Campos dos mocks:
-- **message**: Texto principal que o bot fala
-- **type**: Identificador da etapa (para controle de fluxo)
-- **options**: Array de opções de resposta para o usuário  
-- **followUp**: Próxima pergunta na mesma etapa (opcional)
-- **tone/personality/insight**: Comentários para guiar o tom da conversa (podem ser ignorados no código)
-
-*Sinta-se livre para simplificar esses mocks ou criar sua própria estrutura de dados.*
-
-#### 1. Boas-vindas
-```json
-{
-  "message": "Oi! Eu sou Sofia, consultora digital da Dolado. 😊 Sei que falar sobre vendas online pode parecer complicado, mas prometo que vamos tornar isso bem simples. Em 5 minutos, vou te mostrar exatamente como sua empresa pode crescer nos marketplaces. Pode ser?",
-  "type": "welcome",
-  "options": ["Claro, vamos lá!", "Primeiro quero entender melhor"],
-  "personality": "Consultiva, acolhedora, confiante mas não pressiona"
-}
+```
+dolado-chatbot/
+├── src/
+│   ├── app/              # Roteamento e páginas (convenção do Next.js App Router)
+│   │   ├── api/          # API Routes, como o intermediário para o Hugging Face
+│   │   │   └── chat/
+│   │   │       └── route.ts
+│   │   ├── layout.tsx    # Layout raiz da aplicação
+│   │   └── page.tsx      # Página principal
+│   │
+│   ├── components/       # Todos os componentes React
+│   │   ├── features/     # Componentes de UI genéricos e reutilizáveis (ex: Button, Card)
+│   │   └── ui/           # Componentes específicos de funcionalidades (ex: Chat)
+│   │
+│   ├── data/             # Mocks e dados estáticos (ex: conversation-steps.ts)
+│   │
+│   ├── lib/              # Funções utilitárias (ex: `cn`, helpers de formatação)
+│   │
+│   ├── store/            # Lógica de estado global com Zustand (chat-store.ts)
+│   │
+│   ├── tests/            # Configuração dos testes (ex: setup.ts)
+        ├── e2e/          # Implementação dos testes end-to-end
+│   │
+│   └── types/            # Definições de tipos e interfaces do TypeScript
+│
+├── .env.local            # Variáveis de ambiente
+├── package.json
+├── tailwind.config.ts
+└── vitest.config.ts
 ```
 
-#### 2. Qualificação inicial
-```json
-{
-  "message": "Perfeito! Deixa eu te conhecer melhor. Conta aí, que tipo de operação vocês têm? Quero entender a complexidade do negócio para dar as orientações mais assertivas.",
-  "type": "qualification", 
-  "options": ["Somos indústria/fabricantes", "Distribuidores atacadistas", "Operação mista (fabricamos e distribuímos)", "Grupo empresarial"],
-  "followUp": {
-    "message": "Que legal! E em termos de estrutura, vocês são uma operação de que porte?",
-    "options": ["Média empresa (R$ 10-50mi/ano)", "Grande empresa (R$ 50-200mi/ano)", "Corporação (R$ 200mi+/ano)", "Grupo/Holding"],
-    "tone": "Entende que está falando com tomadores de decisão sérios, com operações complexas"
-  }
-}
-```
+#### Justificativa da Estrutura:
 
-#### 3. Análise de marketplace  
-```json
-{
-  "message": "Entendi perfeitamente o perfil! Agora, uma pergunta estratégica: como vocês enxergam os marketplaces? Sei que muitas indústrias têm receios sobre canibalizarização dos canais tradicionais.",
-  "type": "marketplace",
-  "options": ["Vemos como oportunidade adicional", "Temos receio de conflito com distribuidores", "Ainda estamos avaliando", "Concorrentes já estão lá, precisamos reagir"],
-  "followUp": {
-    "message": "Faz sentido! E se fossem testar, qual canal seria mais estratégico para o porte de vocês?",
-    "options": ["Mercado Livre (maior alcance)", "Amazon (perfil mais premium)", "Shopee (crescimento rápido)", "B2B marketplaces", "Marketplace próprio"],
-    "insight": "Mostra que entende estratégias de canal para grandes empresas"
-  }
-}
-```
+- **`/app`**: Segue a convenção do Next.js App Router para roteamento de páginas e APIs.
+    
+- **`/components`**: Centraliza todos os componentes React, com uma subdivisão estratégica:
+    
+    - **`/ui`**: Contém os blocos de construção básicos e de apresentação, como botões e inputs (geralmente vindos do `shadcn/ui`).
+        
+    - **`/features`**: Contém componentes mais complexos que orquestram a lógica de uma funcionalidade específica, como o `ChatWindow`, que utiliza os componentes de `/ui`.
+        
+- **`/store`**: Isola completamente a lógica de estado global, facilitando a manutenção e os testes.
+    
+- **`/lib`, `/data`, `/types`**: Pastas com nomes convencionais que separam claramente utilitários, dados estáticos e tipos, melhorando a organização geral do projeto.
+    
+- **Co-localização de Testes**: Os arquivos de teste (ex: `Button.test.tsx`) são mantidos na mesma pasta que os componentes que eles testam. Isso facilita a localização e a manutenção dos testes junto com o código-fonte. 
+**Observação**: os testes end-to-end estão localizados na pasta e2e, dentro de tests, pois não estão associados a unidades específicas do sistema, mas sim ao fluxo completo da aplicação.
 
-#### 4. Produtos
-```json
-{
-  "message": "Perfeito! Agora vamos falar do portfólio. Com o volume que vocês devem ter, imagino que seja um catálogo robusto. Quantas SKUs vocês gerenciam?",
-  "type": "products",
-  "options": ["Catálogo focado (até 500 SKUs)", "Portfólio amplo (500-2000 SKUs)", "Mega catálogo (2000+ SKUs)", "Multiple categorias/divisões"],
-  "followUp": {
-    "message": "E me conta, qual segmento representa o core do negócio de vocês?",
-    "options": ["Bens de consumo duráveis", "Componentes/Insumos industriais", "Produtos de marca própria", "Linha completa multi-categoria", "B2B especializado"],
-    "tone": "Reconhece a complexidade de grandes operações e múltiplas linhas"
-  }
-}
-```
+ ## Como Rodar o Projeto
 
-#### 5. Diagnóstico
-```json
-{
-  "message": "Seus produtos têm potencial gigantesco online! Agora, para entender melhor a maturidade operacional: como vocês gerenciam a operação hoje? ERP, WMS, integração?",
-  "type": "diagnosis",
-  "options": ["ERP robusto (SAP, Oracle, etc)", "Sistema próprio bem estruturado", "Mix de sistemas integrados", "Operação ainda manual em partes"],
-  "followUp": {
-    "message": "E em termos de marketing/branding digital, como vocês se posicionam no mercado?",
-    "options": ["Marca consolidada offline, zero digital", "Presença básica (site institucional)", "Marketing B2B estruturado", "Estratégia digital em desenvolvimento", "Focamos só no relacionamento direto"],
-    "tone": "Entende que grandes empresas têm operações complexas e decisões estruturadas"
-  }
-}
-```
+Siga os passos abaixo para configurar e executar o projeto.
 
-#### 6. Resultado
-```json
-{
-  "message": "Roberto, conversando com você fica claro uma coisa: vocês estão numa posição PRIVILEGIADA. Têm produto consolidado, operação estruturada, marca respeitada - só falta usar isso no digital. Empresas do porte de vocês que entraram nos marketplaces cresceram 40-60% sem canibalizarizar os canais tradicionais.",
-  "type": "result",
-  "diagnosis": {
-    "stage": "Gigante Adormecido Digital",
-    "potential": "Potencial de R$ 10-30mi adicionais em 18 meses via marketplaces",
-    "specificInsights": "Indústrias com faturamento similar à de vocês criaram novos canais de receita representando 15-25% do faturamento total",
-    "recommendations": [
-      "Estratégia de canal complementar (não concorrente)",
-      "Pricing diferenciado para não conflitar com distribuidores", 
-      "Teste controlado em marketplace premium primeiro",
-      "Estrutura dedicada para e-commerce (não impacta operação atual)"
-    ]
-  },
-  "nextSteps": {
-    "message": "Que tal uma conversa estratégica com nosso especialista em grandes contas? Ele já ajudou indústrias similares a criar canais digitais de R$ 20-50mi sem nenhum conflito. Posso agendar?",
-    "options": ["Sim, quero conversa estratégica", "Manda um case similar primeiro"],
-    "urgency": "Seus concorrentes já estão se movimentando - quem sair na frente vai dominar o digital no seu segmento"
-  }
-}
-```
+#### ✅ Pré-requisitos
 
-## Requisitos obrigatórios
+- **Node.js**: `v18.x` ou superior.
+    
+- **npm** ou um gerenciador de pacotes similar (yarn, pnpm).
+    
 
-- **Framework React** com componentes funcionais
-- **Next.js** como framework principal
-- **TypeScript** para tipagem
-- **Layout responsivo** e mobile-first
-- Interface de chat funcional
-- Utilização dos mocks fornecidos (ou similares)
-- **Gerenciamento de estado** (Context API, Redux, Zustand, etc.) - *obrigatório para candidatos pleno/sênior*
+#### ⚙️ Configuração
 
-## O que nós ficaríamos felizes de ver em seu teste
+1. **Clone o repositório:**
+    ```
+    git clone https://github.com/Dynylson/job-frontend-developer.git
+    ```
+    
+2. **Entre na pasta do projeto:**
+    ```
+    cd job-frontend-developer/dolado-chatbot
+    ```
+    
+3. **Instale as dependências:**
+    ```
+    npm install
+    ```
+    
+1. **Instale os Navegadores para o Playwright (Passo Essencial para Testes E2E):**
+    
+    > ⚠️ **Importante:** Este comando faz o download dos navegadores (Chromium, Firefox, WebKit) que o Playwright utiliza para executar os testes End-to-End.
 
-- **Tailwind CSS** para estilização (fortemente recomendado)
-- Componentização bem estruturada e reutilizável
-- **Testes unitários** (recomendado especialmente para vagas pleno/sênior)
-- Animações e transições suaves
-- Estados de loading e feedback visual
-- Tratamento de diferentes fluxos de conversa
-- Design system consistente
+    ```
+    npx playwright install
+    ```
+    
+2. **Configure as Variáveis de Ambiente:**
+    
+    Copie o arquivo de exemplo `.env.example` para criar seu arquivo de ambiente local.
+    
+    ```
+    cp .env.example .env.local
+    ```
+    
+    Em seguida, edite o `.env.local` e insira sua chave da Hugging Face. A `PLAYWRIGHT_BASE_URL` por padrão aponta para "http://localhost:3000", mas você pode alterá-la se necessário.
+    
+    ```
+    # .env.local
+    
+    # Chave para a funcionalidade de IA
+    HUGGING_FACE_API_KEY="seu_token_aqui"
+    
+    # URL base para os testes E2E do Playwright
+    PLAYWRIGHT_BASE_URL="http://localhost:3000"
+    ```
+    
 
-## O que nos impressionaria
+#### ▶️ Executando a Aplicação e os Testes
 
-- **Integração com IA real** usando Hugging Face (veja seção abaixo)
-- Testes de integração/e2e
-- Micro-interações e UX polida
-- Performance otimizada (lazy loading, memoização)
-- Deploy funcional (Vercel, Netlify, etc.)
-- Acessibilidade (a11y) implementada
-- Funcionalidades extras como histórico de conversas, exportação de diagnóstico
+Com o ambiente configurado, você pode utilizar os seguintes scripts:
 
-## Extra: Integração com IA real (Opcional)
+- **Iniciar a Aplicação:**
+    
+    ```
+    npm run dev
+    ```
+    
+    Abra seu navegador e acesse **[http://localhost:3000](https://www.google.com/search?q=http://localhost:3000&authuser=3)**.
+    
+- **Rodar Testes Unitários e de Integração (Vitest):**
+    
+    ```
+    npm run test
+    ```
+    
+    Para uma visualização interativa dos testes unitários:
+    
+    ```
+    npm run test:ui
+    ```
+    
+    
+- **Rodar Testes End-to-End (Playwright):**
+    
+    > **Nota:** Certifique-se de que a aplicação esteja rodando em um terminal (`npm run dev`) antes de executar os testes E2E em outro.
+    
+    ```
+    npm run test:e2e
+    ```
+    
+    Para abrir a interface gráfica do Playwright e depurar os testes E2E visualmente:
+    
+    ```
+    npm run test:e2e:ui
+    ```
+    
 
-Para candidatos que queiram se destacar, especialmente em vagas de senioridade mais alta, oferecemos a possibilidade de integrar com modelos de IA reais usando APIs gratuitas.
+### Resumo dos Scripts Disponíveis
 
-### Opções recomendadas:
-- **Hugging Face** - Possui diversos modelos gratuitos para chat
-  - Documentação: https://huggingface.co/docs/inference-providers/index
-  - Modelos: https://huggingface.co/models
-- **Ollama** - Para rodar modelos localmente
-- **OpenAI API** - Tem tier gratuito limitado
+- `npm run dev`: Inicia a aplicação em modo de desenvolvimento.
 
-*Nota: Esta integração é totalmente opcional e não será critério de desqualificação se não implementada. Recomendamos focar primeiro na interface e experiência do usuário.*
+- `npm run build`: Compila a aplicação para um ambiente de produção.
 
-## Tipos de resposta sugeridos
+- `npm run start`: Inicia um servidor de produção.
 
-Para a interface do chat, recomendamos implementar pelo menos:
-- **Mensagens de texto** simples
-- **Botões de opção** para respostas rápidas
-- **Estados de digitação** ("Bot está digitando...")
+- `npm run lint`: Executa o linter para verificar a qualidade do código.
 
-### Extras que podem impressionar:
-- Cards com informações visuais
-- Formulários inline para coleta de dados
-- Gráficos simples de diagnóstico
-- Upload de arquivos/imagens
-- Respostas com rich media
+- `npm run format`: Formata os arquivos com o Prettier.
 
-## O que nós não gostaríamos
+- `npm run test`: Roda os testes unitários (Vitest).
 
-- Descobrir que não foi você quem fez seu teste
-- Ver commits grandes, sem muita explicação nas mensagens em seu repositório
-- Encontrar um commit com as dependências do NPM
-- Interface não responsiva ou com problemas de usabilidade
-- Código desorganizado ou sem padrão
+- `npm run test:ui`: Abre a UI do Vitest.
 
-## O que avaliaremos de seu teste
+- `npm run test:e2e`: Roda os testes End-to-End (Playwright).
 
-- **Histórico de commits** do git
-- **Instruções** de como rodar o projeto
-- **Organização, semântica, estrutura, legibilidade, manutenibilidade** do seu código
-- **Alcance dos objetivos** propostos
-- **Adaptação mobile** (layout responsivo)
-- **Componentização e extensibilidade** dos componentes React
-- **Experiência do usuário** na interface do chat
-- **Qualidade das interações** e fluxo conversacional
-
----
-
-**Lembre-se:** Este teste deve representar seu melhor trabalho. Não se preocupe se não conseguir implementar todos os extras - preferimos um código bem estruturado e funcional do que muitas funcionalidades mal implementadas.
-
-Boa sorte! 🚀
+- `npm run test:e2e:ui`: Abre a UI do Playwright.
