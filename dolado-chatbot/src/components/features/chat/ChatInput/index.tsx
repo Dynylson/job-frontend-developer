@@ -1,4 +1,5 @@
 import { Textarea } from '@/components/ui/textarea';
+import { isMobile } from '@/lib/utils';
 import { useChatStore } from '@/store/chat-store';
 import { SendHorizontal } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
@@ -16,7 +17,9 @@ export const ChatInput = () => {
   const setChatMode = useChatStore((state) => state.setChatMode);
 
   useEffect(() => {
-    if (!useChatStore.getState().isBotTyping) {
+    const isBotTyping = !useChatStore.getState().isBotTyping;
+
+    if (!isMobile() && !isBotTyping) {
       textareaRef.current?.focus();
     }
   }, [messages.length]);
@@ -62,8 +65,9 @@ export const ChatInput = () => {
 
   return (
     <div
-      className="relative border-t-2 border-zinc-800 rounded-none sm:rounded-b-2xl 
-            bg-zinc-900 focus-within:bg-zinc-800 transition-colors"
+      className="border-t-2 border-zinc-800 rounded-none sm:rounded-b-2xl 
+        bg-zinc-900 focus-within:bg-zinc-800 transition-colors
+        fixed bottom-0 left-0 right-0 z-50 sm:relative"
     >
       <Textarea
         data-testid="message-textarea"

@@ -2,7 +2,10 @@ import { ChatMenu } from '../ChatMenu';
 
 export const ChatHeader = () => {
   return (
-    <header className="flex justify-between items-center p-3 sm:p-4 rounded-tl-2xl rounded-tr-2xl border-b-2 border-zinc-800">
+    <header
+      className="flex justify-between items-center p-3 sm:p-4 rounded-tl-2xl rounded-tr-2xl border-b-2 border-zinc-800
+      fixed top-0 left-0 right-0 z-50 sm:static bg-zinc-900"
+    >
       <div className="flex flex-col">
         <div className="flex items-center gap-1.5">
           <h1 className="text-[1.2rem] sm:text-xl font-semibold">Sofia</h1>
