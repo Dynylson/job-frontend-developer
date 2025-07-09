@@ -17,7 +17,7 @@ export const ChatInput = () => {
   const setChatMode = useChatStore((state) => state.setChatMode);
 
   useEffect(() => {
-    const isBotTyping = !useChatStore.getState().isBotTyping;
+    const isBotTyping = useChatStore.getState().isBotTyping;
 
     if (!isMobile() && !isBotTyping) {
       textareaRef.current?.focus();
