@@ -1,22 +1,26 @@
-### Como foi a experiência no decorrer de todo o processo de desenvolvimento?
+# Dolado Chatbot
+
+Acesse aqui: https://dolado-chatbot-dynylson.vercel.app/
+
+## Como foi a experiência no decorrer de todo o processo de desenvolvimento?
 
 A experiência no desenvolvimento deste teste técnico foi extremamente positiva e completa, abrangendo desde a consolidação de tecnologias dominadas até a exploração de novas fronteiras com IA.
 
-#### Base Técnica e Execução Ágil
+### Base Técnica e Execução Ágil
 
 O projeto me permitiu aplicar minha experiência prática em um ecossistema de frontend moderno, utilizando tecnologias com as quais tenho grande familiaridade, como React, Next.js, TypeScript e Tailwind CSS. A utilização de bibliotecas como **Shadcn/UI** e **Framer Motion** agilizou a criação de uma interface polida e responsiva, permitindo que eu focasse na lógica de negócio e na experiência do usuário.
 
-#### O Valor Prático dos Testes Automatizados
+### O Valor Prático dos Testes Automatizados
 
 Uma parte fundamental do meu processo foi a implementação de uma estratégia de testes robusta desde o início, com **Vitest** para testes unitários e **Playwright** para testes E2E. O valor dessa abordagem se provou imenso durante o desenvolvimento: ao refatorar componentes ou a lógica da `store`, a suíte de testes funcionava como uma rede de segurança contra regressões, alertando imediatamente quando uma quebra de funcionalidade era introduzida. Isso permitiu correções rápidas e eficientes, reforçando a importância de um ciclo de desenvolvimento orientado a testes para garantir a qualidade e a segurança do software.
 
-#### Desafios de Produto e Exploração Tecnológica
+### Desafios de Produto e Exploração Tecnológica
 
 O desafio mais estratégico foi, sem dúvida, a concepção da UI/UX. O objetivo não era apenas técnico, mas criar uma ponte entre a ferramenta e o usuário final — uma interface que transmitisse confiança, profissionalismo e simplicidade para um público B2B.
 
 O ponto alto da exploração técnica foi a integração com Inteligência Artificial via **Hugging Face**. Sendo uma ferramenta nova para mim, o processo envolveu desde a pesquisa e escolha de um modelo de linguagem adequado (`LLM`) até a implementação de uma API Route segura no Next.js para gerenciar as chamadas. A facilidade de uso e o poder dos modelos disponíveis me impressionaram, e a Hugging Face posicionou-se como uma ferramenta estratégica no meu arsenal técnico para futuras implementações de IA.
 
-### Quais foram as principais decisões tomadas?
+## Quais foram as principais decisões tomadas?
 
 A construção deste projeto envolveu diversas decisões estratégicas de arquitetura e tecnologia para garantir um resultado robusto, escalável e alinhado às melhores práticas do mercado. As principais foram:
 
@@ -50,7 +54,7 @@ A construção deste projeto envolveu diversas decisões estratégicas de arquit
         
     - **Raciocínio:** Esta é uma prática de segurança fundamental. Ela impede que a chave de API secreta (`API Token`) seja exposta no navegador do cliente. Toda a comunicação com o serviço externo é feita de forma segura no lado do servidor, que é o ambiente correto para gerenciar tokens.
 
-### Como foi organizado o projeto em termos de estrutura de pastas e arquivos?
+## Como foi organizado o projeto em termos de estrutura de pastas e arquivos?
 
 A estrutura do projeto foi pensada para ser intuitiva, escalável e manter uma clara separação de responsabilidades, utilizando um diretório `src/` para isolar o código da aplicação das configurações na raiz.
 
@@ -87,7 +91,7 @@ dolado-chatbot/
 └── vitest.config.ts
 ```
 
-#### Justificativa da Estrutura:
+### Justificativa da Estrutura:
 
 - **`/app`**: Segue a convenção do Next.js App Router para roteamento de páginas e APIs.
     
@@ -108,14 +112,14 @@ dolado-chatbot/
 
 Siga os passos abaixo para configurar e executar o projeto.
 
-#### ✅ Pré-requisitos
+### ✅ Pré-requisitos
 
 - **Node.js**: `v18.x` ou superior.
     
 - **npm** ou um gerenciador de pacotes similar (yarn, pnpm).
     
 
-#### ⚙️ Configuração
+### ⚙️ Configuração
 
 1. **Clone o repositório:**
     ```
@@ -161,7 +165,7 @@ Siga os passos abaixo para configurar e executar o projeto.
     ```
     
 
-#### ▶️ Executando a Aplicação e os Testes
+### ▶️ Executando a Aplicação e os Testes
 
 Com o ambiente configurado, você pode utilizar os seguintes scripts:
 
